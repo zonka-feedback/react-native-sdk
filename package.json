@@ -1,0 +1,155 @@
+{
+  "name": "react-native-zonkafeedback",
+  "version": "1.0.3",
+  "description": "React native library for zonkafeedback survey",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios"
+  ],
+  "scripts": {
+    "example": "yarn workspace zonka-react-sdk-example",
+    "build": "tsup",
+    "dev": "NODE_ENV=development yarn build --watch",
+    "lint": "eslint src/",
+    "test": "jest",
+    "changeset": "changeset",
+    "release": "changeset publish"
+  },
+
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zonka-feedback/react-native-sdk"
+  },
+  "author": "Aman Sahai <aman.sahai@zonkafeedback.com> (https://github.com/amansahai7)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zonka-feedback/react-native-sdk/issues"
+  },
+  "homepage": "https://github.com/zonka-feedback/react-native-sdk",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.0.2",
+    "@evilmartians/lefthook": "^1.5.0",
+    "@react-native-community/netinfo": "^11.3.0",
+    "@react-native/eslint-config": "^0.73.1",
+    "@release-it/conventional-changelog": "^5.0.0",
+    "@types/jest": "^29.5.5",
+    "@types/react": "^18.2.44",
+    "@types/react-native-background-timer": "^2.0.2",
+    "commitlint": "^17.0.2",
+    "del-cli": "^5.1.0",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "react": "18.2.0",
+    "react-native": "0.73.4",
+    "react-native-background-timer": "^2.4.1",
+    "react-native-builder-bob": "^0.20.0",
+    "react-native-device-info": "^10.13.0",
+    "release-it": "^15.0.0",
+    "turbo": "^1.10.7",
+    "typescript": "^5.2.2"
+  },
+  "resolutions": {
+    "@types/react": "^18.2.44"
+  },
+  "peerDependencies": {
+    "@react-native-community/netinfo": ">=6.0.2",
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0",
+    "react-native-device-info": ">=9.0.2",
+    "react-native-svg": ">=9.0.0",
+    "react-native-webview": ">=10.10.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/lib/"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "1.17.11",
+    "@react-navigation/native": "^6.1.14",
+    "axios": "^1.6.7"
+  }
+}
