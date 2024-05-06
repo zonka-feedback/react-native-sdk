@@ -1,0 +1,18 @@
+# Table of contents
+
+* [Getting Started](README.md)
+* [API & Webhooks](api-and-webhooks/README.md)
+  * [API Endpoints](api-and-webhooks/api-endpoints.md)
+  * [Send Email Survey](api-and-webhooks/send-email-survey.md)
+  * [Webhooks](api-and-webhooks/webhooks.md)
+  * [Send SMS Survey](api-and-webhooks/send-sms-survey.md)
+* [JS Web Client](js-web-client/README.md)
+  * [Installation](js-web-client/installation.md)
+  * [Client Reference](js-web-client/client-reference.md)
+  * [What all data is collected](js-web-client/what-all-data-is-collected.md)
+  * [Content Security Policy](js-web-client/content-privacy-policy.md)
+  * [Web Storage and Cookies](js-web-client/web-storage-and-cookies.md)
+* [In-App SDK](in-app-sdk/README.md)
+  * [Android SDK](in-app-sdk/android-sdk.md)
+  * [iOS SDK](in-app-sdk/ios-sdk.md)
+  * [React Native SDK](in-app-sdk/react-native-sdk.md)
