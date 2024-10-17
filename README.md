@@ -1,3 +1,10 @@
+---
+description: >-
+  Welcome to the Zonka Feedback Developers' Guide, this documentation aims at
+  providing a secure means for external developers to write new applications
+  that can access the data across the platform.
+---
+
 # Getting Started
 
 Zonka Feedback is a Customer Feedback & Experience Management Platform. With customizable feedback forms, multichannel survey distribution, real-time responses, powerful feedback workflows, actionable reporting, and closing the feedback loop, you can create world-class experiences with Zonka Feedback for your targeted audience.
