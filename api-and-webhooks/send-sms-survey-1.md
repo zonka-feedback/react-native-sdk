@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Send WhatsApp Surveys
 
 ## Setting up WhatsApp&#x20;
