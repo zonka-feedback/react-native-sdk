@@ -92,7 +92,11 @@ You can customize the survey with some additional parameters such as a customize
 | `locationId`       | string | Specify the Location Id of the location you want the email survey to be sent.                                  |
 | `language`         | string | The language in which the survey should be opened.                                                             |
 
-The above is a list of non-mandatory variables to customize the content and distribution of the SMS survey.
+The above is a list of non-mandatory variables to customize the content and distribution of the WhatsApp survey.
+
+{% hint style="info" %}
+**TIP:** Please refer to Infobip API documentation [here](https://www.infobip.com/docs/api/channels/whatsapp/whatsapp-outbound-messages) to get information on Template Names, Languages, and other attributes that may come in handy while using Zonka Feedback API.
+{% endhint %}
 
 ## Sending a specific template
 
@@ -144,17 +148,17 @@ attributes
 
 By giving value to the `scheduleDateTime` parameter, you can set the WhatsApp message to be sent at a later time.&#x20;
 
-| Parameter          | Value  | Description                                                             |
-| ------------------ | ------ | ----------------------------------------------------------------------- |
-| `scheduleDateTime` | string | Specify a future Date and Time for which SMS survey is to be scheduled. |
+| Parameter          | Value  | Description                                                                  |
+| ------------------ | ------ | ---------------------------------------------------------------------------- |
+| `scheduleDateTime` | string | Specify a future Date and Time for which WhatsApp survey is to be scheduled. |
 
 ## Send to Contact Segments
 
 Zonka Feedback supports two types of Contact segments (formerly Lists): Dynamic and Static. You can send WhatsApp surveys to multiple recipients by adding them to these contact lists and specifying the list name in the Send WhatsApp Survey  API. &#x20;
 
-| Parameter | Value  | Description                                                              |
-| --------- | ------ | ------------------------------------------------------------------------ |
-| `list`    | string | Specify the Contact segment names to which the SMS survey is to be sent. |
+| Parameter | Value  | Description                                                                                     |
+| --------- | ------ | ----------------------------------------------------------------------------------------------- |
+| `list`    | string | Specify the Contact segment (Formerly Lists) names to which the WhatsAppp survey is to be sent. |
 
 {% hint style="info" %}
 You can fetch a list of Contact Lists in your account using the [GET Contact Lists API](https://apidocs.zonkafeedback.com/#1cdca186-e86f-45c4-9a85-f6e3bcb2f872)
