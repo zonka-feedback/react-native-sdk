@@ -5,7 +5,7 @@
   * [API Endpoints](api-and-webhooks/api-endpoints.md)
   * [Send Email Survey](api-and-webhooks/send-email-survey.md)
   * [Send SMS Survey](api-and-webhooks/send-sms-survey.md)
-  * [Send WhatsApp Surveys](api-and-webhooks/send-whatsapp-surveys.md)
+  * [Send WhatsApp Surveys](api-and-webhooks/send-whatsapp-survey.md)
   * [Webhooks](api-and-webhooks/webhooks.md)
 * [JS Web Client](js-web-client/README.md)
   * [Installation](js-web-client/installation.md)
