@@ -4,7 +4,7 @@
 
 ### Connecting your Infobip account
 
-Zonka Feedback currently supports Infobip as the WhatsApp Service partner. If you don't have an Infobip account you can signup for it or if you would prefer us to help set it up you can schedule a call with us here.
+Zonka Feedback currently supports Infobip as the WhatsApp Service partner. If you don't have an Infobip account you can signup for it or if you would prefer us to help set it up you can [**schedule a call with us.**](https://www.zonkafeedback.com/schedule-demo)
 
 Once you have set up your Infobip account and your senders you will need to connect it with your Zonka Feedback account. Here is how you can do it:
 
