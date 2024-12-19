@@ -16,4 +16,5 @@
 * [In-App SDK](in-app-sdk/README.md)
   * [Android SDK](in-app-sdk/android-sdk.md)
   * [iOS SDK](in-app-sdk/ios-sdk.md)
+  * [Flutter SDK](in-app-sdk/flutter-sdk.md)
   * [React Native SDK](in-app-sdk/react-native-sdk.md)
