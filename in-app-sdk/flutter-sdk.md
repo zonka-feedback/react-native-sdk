@@ -60,8 +60,8 @@ class _MyAppState extends State<MyApp> {
 For Regions use the following
 
 * US - for US Region
-* EU - for EU Region
-* IN - for IN Region
+* EU - for European Region
+* IN - for India Region
 
 ### Setup&#x20;
 
