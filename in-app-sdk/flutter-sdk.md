@@ -46,7 +46,7 @@ To use this SDK, add `zonkafeedback_sdk` as a [dependency in your pubspec.yaml f
 Initialize the SDK in your application using `init()` method. Call this method only once, in the main component (e.g. `lib/main.dart` file).
 
 ```dart
-import 'package:zonkafeedback_sdk/zonka_feedback.dart';
+import 'package:zonkafeedback_sdk/zonkafeedback_sdk.dart';
 
 class _MyAppState extends State<MyApp> {
   @override
@@ -67,7 +67,7 @@ For Regions use the following
 
 Create a `ZFSurvey` object to configure and start the survey for feedback in your function.
 
-<pre class="language-dart"><code class="lang-dart">import 'package:zonkafeedback_sdk/zonka_feedback.dart';
+<pre class="language-dart"><code class="lang-dart">import 'package:zonkafeedback_sdk/zonkafeedback_sdk.dart';
 
 <strong>ZFSurvey().startSurvey();
 </strong></code></pre>
@@ -81,7 +81,7 @@ Create a `ZFSurvey` object to configure and start the survey for feedback in you
 You can set the value of sendDeviceDetails to true if you want to submit details of your device along with the Zonka Feedback survey response. This would send the details of the device such as OS, OS version, IP address, and type of device. When you implement SDK it's true by default.
 
 ```dart
-import 'package:zonkafeedback_sdk/zonka_feedback.dart';
+import 'package:zonkafeedback_sdk/zonkafeedback_sdk.dart';
 
 ZFSurvey().sendDeviceDetails(true);
 ```
@@ -100,8 +100,8 @@ Attributes can be used to:
 
 #### Example
 
-```java
-import 'package:zonkafeedback_sdk/zonka_feedback.dart';
+```dart
+import 'package:zonkafeedback_sdk/zonkafeedback_sdk.dart';
 
 Map<String, String> properties = {
   'property1': 'value1',
@@ -121,7 +121,7 @@ If you have an app where users are able to log in or signup then you can add the
 
 **Example**
 
-<pre class="language-dart"><code class="lang-dart">import 'package:zonkafeedback_sdk/zonka_feedback.dart';
+<pre class="language-dart"><code class="lang-dart">import 'package:zonkafeedback_sdk/zonkafeedback_sdk.dart';
 
 Map&#x3C;String, dynamic> properties = {
   'contact_name': 'Robin James',
