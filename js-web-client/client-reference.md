@@ -4,10 +4,6 @@ description: Let us dive deeper in what can you achieve with Zonka Feedback web 
 
 # Client Reference
 
-##
-
-##
-
 ## Web Surveys and Workspaces
 
 Our web client for web surveys is workspace specific and each workspace may contain multiple surveys. The web client will expose at max ONE type of each widget - Pop over, Pop Up and Side bar. There could be multiple surveys with enabled pop overs or pop ups and side bars, the one which was enabled or updated last, will be visible through the workspace web client. &#x20;
@@ -84,6 +80,52 @@ PageURL</a>
 ```
 
 You can get the manual trigger code under the JS Client Code Tab in the widget configuration page.
+
+## Throttling Options for Manual Triggers
+
+Zonka Feedback provides the ability to control how and when widgets appear on your website even when you are using Manual Triggers.  This feature can help improve user experience by ensuring that the widget is not displayed too frequently.
+
+#### Throttling Methods
+
+You can trigger the widget with the following options for controlling its display behavior:
+
+1.  **Throttle by Page**\
+    This option ensures that the widget is shown only once per page load. After the widget is triggered on the page, it will not appear again on the same page.
+
+    ```javascript
+    _zf('startForm', {'widgetId': '3xZbV7', 'throttle': 'page'})
+    ```
+
+    * **Usage**: This method is ideal if you want the widget to appear only once per page, regardless of how many times the user refreshes the page.
+2.  **Throttle by Session**\
+    This option ensures that the widget will be triggered only once per session. The session is determined based on the user's visit to your site, and the widget will not appear again until the user’s session expires or they close the browser/tab.
+
+    ```javascript
+    _zf('startForm', {'widgetId': '3xZbV7', 'throttle': 'session'})
+    ```
+
+    * **Usage**: Use this method if you want the widget to appear only once during the user's entire session. If the user navigates between pages within the same session, the widget will not show again.
+3.  **Throttle by Session and Page**\
+    This option combines both session and page throttling. The widget will be shown only once per page load, and it will not appear again on the same page or during the same session.
+
+    ```javascript
+    _zf('startForm', {'widgetId': '3xZbV7', 'throttle': 'session-page'})
+    ```
+
+    * **Usage**: This method is useful when you want to ensure that the widget doesn't appear more than once on the same page, and it won’t be triggered again even if the user navigates through different pages within the same session.
+
+#### Example Use Case
+
+Imagine a scenario where you want to show a survey widget to a user only once per page, but you don’t want it to show again on the same page reload or during the same session. A typical scenario can be a survey being triggered after a purchase or a booking has been made.\
+
+
+You can use the following JavaScript code:
+
+```javascript
+javascriptCopy_zf('startForm', {'widgetId': '3xZbV7', 'throttle': 'session-page'})
+```
+
+This code ensures that the widget will only be triggered once during the entire session, and it won’t show again on the same page load.
 
 ## Register Callbacks functions
 
