@@ -123,7 +123,7 @@ If you have an app where users are able to log in or signup then you can add the
 | contact\_name     | string | "Josh Holland"        |
 | contact\_email    | string | "example@company.com" |
 | contact\_mobile   | string | "+14532323223"        |
-| contact\_uniqueid | string | "k2334"               |
+| contact\_uniqueId | string | "k2334"               |
 
 **Swift**
 

@@ -172,7 +172,7 @@ import com.zonkafeedback.zfsdk.ZFSurvey
 
 If you have an app where users are able to log in or signup then you can add the following code to automatically add the contacts in Zonka Feedback. You can pass at least one of the following parameters to identify the users.
 
-<table><thead><tr><th>Parameter</th><th>Type</th><th width="243.66666666666669"> Example</th></tr></thead><tbody><tr><td>contact_name</td><td>string</td><td>"Josh Holland"</td></tr><tr><td>contact_email </td><td>string</td><td>"example@company.com"</td></tr><tr><td>contact_mobile</td><td>string</td><td>"+14532323223"</td></tr><tr><td>contac_uniqueid</td><td>string</td><td>"k2334"</td></tr></tbody></table>
+<table><thead><tr><th>Parameter</th><th>Type</th><th width="243.66666666666669"> Example</th></tr></thead><tbody><tr><td>contact_name</td><td>string</td><td>"Josh Holland"</td></tr><tr><td>contact_email </td><td>string</td><td>"example@company.com"</td></tr><tr><td>contact_mobile</td><td>string</td><td>"+14532323223"</td></tr><tr><td>contac_uniqueId</td><td>string</td><td>"k2334"</td></tr></tbody></table>
 
 _**Java**_
 
