@@ -24,7 +24,7 @@ We can identify users with these variables
 | ----------------- | ----------------- |
 | Contact Mobile    | contact\_mobile   |
 | Contact Email     | contact\_email    |
-| Contact Unique Id | contact\_uniqueid |
+| Contact Unique Id | contact\_uniqueId |
 | Contact Name      | contact\_name     |
 
 You can create more such attributes in Survey > Build > Variables.&#x20;
