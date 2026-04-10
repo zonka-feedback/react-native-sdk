@@ -81,6 +81,166 @@ PageURL</a>
 
 You can get the manual trigger code under the JS Client Code Tab in the widget configuration page.
 
+## Setting up Multilingual Survey
+
+Here's the new section, written to match the exact style, tone, and formatting of the existing Client Reference docs:
+
+***
+
+Zonka Feedback's web client supports multilingual survey widgets, allowing your surveys to automatically load in the correct language for each visitor. There are two methods for controlling widget language — automatic detection from the browser/website, and explicit language configuration via the JS client.
+
+***
+
+### Method 1 — Automatic Language Detection (Default)
+
+By default, the Zonka Feedback JS client reads the `lang` attribute on the `<html>` tag of the page it is installed on, and maps it to the corresponding language configured in your survey.
+
+```html
+<!-- Example: A French website -->
+<html lang="fr">
+```
+
+This will result in the we widget showing the survey in French Language detecting the language fro the lang tag.
+
+> **Note:** The mapping is case-insensitive. Both `fr` and `FR` will resolve correctly.
+
+No additional configuration is required for this method to work. If the detected language matches a language that has been added to your survey, the widget will load in that language automatically.
+
+***
+
+### Method 2 — Passing a Language Explicitly
+
+If you want to override the automatically detected language and force the widget to load in a specific language, you can pass a `lang` parameter using the `settings` function in the JS client code.
+
+> **Important:** When Method 2 is used, it takes precedence over Method 1. The automatically detected page language is ignored.
+
+```javascript
+_zf('settings', { language: 'fr_FR' })
+```
+
+Place the `settings` call within your Zonka Feedback JS snippet, after the core embed script and before any other `_zf` calls.
+
+Example:&#x20;
+
+```javascript
+<!-- Zonka Feedback JavaScript Code Starts -->
+<script id="zfEmbed">
+  window._zfQueue = window._zfQueue || []; function _zf(){_zfQueue.push(arguments); }
+  (function() { ZonkaFeedback = function (en, fb){ document.body.addEventListener(en, fb, false); };
+  var sc, w, d = document, ce = d.createElement, gi = d.getElementById, gt = d.getElementsByTagName,
+  id = "zfEmbedScript"; if (!gi.call(d, id)) { sc = ce.call(d, "script"); sc.async=!0; sc.id = id;
+  sc.src = "https://us-js.zonka.co/61645143923bbb00070e3670";
+  w = gt.call(d, "script")[0]; w.parentNode.insertBefore(sc, w); }})();
+
+  _zf('settings', { language: 'fr_FR' })   // Force the widget to load in French
+
+  _zf('variables', {
+    contact_name: "John Appleseed",
+    contact_email: "john@example.com",
+  })
+</script>
+<!-- Zonka Feedback JavaScript Code Ends -->
+```
+
+#### Language code reference
+
+Please use this table as a reference for passing the laguage code for your survey language for the `language` parameter.
+
+| Language               | Language Code |
+| ---------------------- | ------------- |
+| English                | en\_US        |
+| French                 | fr\_FR        |
+| Tamil                  | ta\_IN        |
+| German                 | de\_DE        |
+| Italian                | it\_IT        |
+| Hindi                  | hi\_IN        |
+| Arabic                 | ar\_AE        |
+| Gujarati               | gu\_IN        |
+| Spanish (Latin)        | es\_US        |
+| Spanish (European)     | es\_ES        |
+| Malay                  | ms\_MS        |
+| Indonesian             | id\_ID        |
+| Russian                | ru\_RU        |
+| Portuguese (Brazilian) | pt\_BR        |
+| Portuguese (European)  | pt\_PT        |
+| Swedish                | sv\_SV        |
+| Danish                 | da\_DA        |
+| Norwegian              | nb\_NB        |
+| Dutch                  | nl\_NL        |
+| Finnish                | fi\_FI        |
+| Japanese               | ja\_JA        |
+| Korean                 | ko\_KO        |
+| Bengali                | bn\_IN        |
+| Marathi                | mr\_IN        |
+| Odia                   | or\_IN        |
+| Punjabi                | pa\_IN        |
+| Kannada                | kn\_IN        |
+| Telugu                 | te\_IN        |
+| Malayalam              | ml\_IN        |
+| Romanian               | ro\_RO        |
+| Chinese                | zh\_CN        |
+| Azerbaijani            | az\_AZ        |
+| Canadian French        | fr\_CA        |
+| Hungarian              | hu\_HU        |
+| Haitian Creole         | ht\_FR        |
+| Burmese                | my\_MM        |
+| Vietnamese             | vi\_VN        |
+| Hebrew                 | he\_IL        |
+| Thai                   | th\_TH        |
+| Chinese (Traditional)  | zh\_TW        |
+| Turkish                | tr\_TR        |
+| Polish                 | pl\_PL        |
+| Cantonese              | yue\_CN       |
+| Gaeilge                | ga\_IE        |
+| Cymraeg                | cy\_GB        |
+| Afrikaans              | af\_ZA        |
+| Czech                  | cs\_CZ        |
+| Croatian               | hr\_HR        |
+| Slovenian              | si\_SI        |
+| Bulgarian              | bg\_BG        |
+| Dhivehi                | dv\_MV        |
+| Nepali                 | ne\_NP        |
+| Somali                 | so\_SO        |
+| Hmong                  | hmn\_HMN      |
+| Serbian                | sr\_RS        |
+| Ukrainian              | uk\_UA        |
+| Latvian                | lv\_LV        |
+| Slovak                 | sk\_SK        |
+| Khmer                  | km\_KH        |
+| Filipino               | fil\_PH       |
+
+***
+
+#### Language Resolution Behaviour
+
+The table below summarises how the client resolves language in every possible scenario:
+
+| Situation                                                                    | Behaviour                                                                                                            |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Detected/passed language matches a language added to the survey              | Widget loads in that language. Language selection popup does **not** appear.                                         |
+| Detected/passed language does **not** match any language added to the survey | Widget loads in the survey's **default language**. Language selection popup does **not** appear.                     |
+| No language is detected and no language is passed                            | Widget loads in the survey's default language. Language selection popup behaviour follows your survey configuration. |
+
+> The language selection popup will **never** open when a language has been detected from the page or explicitly passed via `settings`, regardless of whether the language matches a survey language or not.
+
+***
+
+### Configuring Button Text for Multiple Languages&#x20;
+
+**For Bottom Bar & Side Tab type widgets**
+
+For the **Bottom Bar** and **Side Tab** widgets, the button text visible to your visitors before they open the survey can be customised per language.
+
+To add translated button text:
+
+1. Go to the widget configuration for your **Bottom Bar** or **Side Tab**.
+2. Click **Add for other languages** — this opens a language panel listing all languages currently added to your survey.
+3. Enter the button text for each language and save.
+
+When a visitor's language is detected or passed, the button text will automatically display in the matching language. If no matching translation is found for the button text, the default language text is used.
+
+> This multilingual button text configuration is available only for the **Bottom Bar** and **Side Tab** widget types.
+
 ## Throttling Options for Manual Triggers
 
 Zonka Feedback provides the ability to control how and when widgets appear on your website even when you are using Manual Triggers.  This feature can help improve user experience by ensuring that the widget is not displayed too frequently.
@@ -116,8 +276,7 @@ You can trigger the widget with the following options for controlling its displa
 
 #### Example Use Case
 
-Imagine a scenario where you want to show a survey widget to a user only once per page, but you don’t want it to show again on the same page reload or during the same session. A typical scenario can be a survey being triggered after a purchase or a booking has been made.\
-
+Imagine a scenario where you want to show a survey widget to a user only once per page, but you don’t want it to show again on the same page reload or during the same session. A typical scenario can be a survey being triggered after a purchase or a booking has been made.<br>
 
 You can use the following JavaScript code:
 
