@@ -83,10 +83,6 @@ You can get the manual trigger code under the JS Client Code Tab in the widget c
 
 ## Setting up Multilingual Survey
 
-Here's the new section, written to match the exact style, tone, and formatting of the existing Client Reference docs:
-
-***
-
 Zonka Feedback's web client supports multilingual survey widgets, allowing your surveys to automatically load in the correct language for each visitor. There are two methods for controlling widget language — automatic detection from the browser/website, and explicit language configuration via the JS client.
 
 ***
