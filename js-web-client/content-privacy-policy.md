@@ -4,15 +4,22 @@ CSP provides a layer of security for you by protecting you from unwanted Scripts
 
 ```javascript
 connect-src: 
-'self' ws: https://*.zonkafeedback.com;
+'self' https://*.zonkafeedback.com
+ wss:https://*.zonkafeedback.com;
+
 
 script-src: 
 https://us-js.zonka.co 
 https://e-js.zonka.co
+https://au-js.zonka.co
+https://in-js.zonka.co
 
 frame-src: 
 https://us1.zonka.co 
 https://e.zonka.co
+https://au-js.zonka.co
+https://in-js.zonka.co
+
 
 
 worker-src blob:
