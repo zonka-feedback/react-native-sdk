@@ -18,3 +18,4 @@
   * [iOS SDK](in-app-sdk/ios-sdk.md)
   * [Flutter SDK](in-app-sdk/flutter-sdk.md)
   * [React Native SDK](in-app-sdk/react-native-sdk.md)
+* [Zonka Feedback MCP Server](zonka-feedback-mcp-server.md)
