@@ -38,7 +38,7 @@ Sign in through your browser and approve the connection — no keys to copy. The
 
 ### Set up your AI tool
 
-The fastest path for Claude and ChatGPT is the Connect AI Agents page inside Zonka Feedback (`/connect-ai-agents`) — it gives you a one-click install link for Claude and copy-ready snippets for ChatGPT. The manual steps are below.
+The fastest path for Claude and ChatGPT is the Connect AI Agents page inside Zonka Feedback it gives you a one-click install link for Claude and copy-ready snippets for ChatGPT. The manual steps are below.
 
 #### Claude (claude.ai and Claude Desktop)
 
@@ -88,7 +88,7 @@ Test the connection directly with the MCP Inspector:
 npx @modelcontextprotocol/inspector
 ```
 
-Choose Streamable HTTP and connect to `https://mcp.zonkafeedback.com/mcp`.
+Choose Streamable HTTP and connect to `https://mcp.zonkafeedback.com`
 
 Common issues:
 
@@ -337,7 +337,7 @@ Key Parameters:
 
 **Is the MCP server read-only?** Yes. All 21 tools read data; none of them modify your account. Write capabilities will be introduced later with explicit, per-workspace controls.
 
-**Which regions are supported?** All of them — US, EU, India, and Australia — through the single URL `https://mcp.zonkafeedback.com/mcp`. Routing to your data region is automatic.
+**Which regions are supported?** All of them — US, EU, India, and Australia — through the single URL `https://mcp.zonkafeedback.com`. Routing to your data region is automatic.
 
 **Who in my team can connect?** Once an admin has enabled the MCP server for your account (Settings → AI Governance → AI Features → Agents & MCP), any Zonka Feedback user can authorize a connection with their own login. Each connection carries that user's permissions only.
 
