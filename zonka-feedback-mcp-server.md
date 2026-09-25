@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Zonka Feedback MCP Server
 
 #### How Zonka Feedback MCP works?
