@@ -30,28 +30,11 @@ Once it's enabled, **every user on the account can connect their own AI tool** �
 
 The server supports two authentication methods.
 
-#### 1. OAuth (recommended)
+#### OAuth (recommended)
 
 Sign in through your browser and approve the connection — no keys to copy. The Zonka Feedback MCP server implements OAuth 2.1 with PKCE and dynamic client registration, so any MCP client that supports remote OAuth servers (Claude, ChatGPT, Cursor, and others) can connect with just the server URL. Access is scoped to your Zonka Feedback user: the AI tool sees exactly what you can see in the app, nothing more.
 
-#### 2. API key (Bearer token)
 
-For clients that don't support OAuth, authenticate with a Zonka Feedback API key passed as a Bearer token. Generate a key with read scope from your Zonka Feedback account (Developers → API Keys); keys look like `zf_…`.
-
-```json
-{
-  "mcpServers": {
-    "zonka-feedback": {
-      "httpUrl": "https://mcp.zonkafeedback.com/mcp",
-      "headers": {
-        "Authorization": "Bearer zf_YOUR_API_KEY"
-      }
-    }
-  }
-}
-```
-
-Treat API keys like passwords. Anyone holding the key can read the data its user can read. Revoke a key from the same place you created it.
 
 ### Set up your AI tool
 
