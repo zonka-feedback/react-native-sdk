@@ -28,11 +28,9 @@ Once it's enabled, **every user on the account can connect their own AI tool** �
 
 ### Authentication
 
-The server supports two authentication methods.
+#### OAuth&#x20;
 
-#### OAuth (recommended)
-
-Sign in through your browser and approve the connection — no keys to copy. The Zonka Feedback MCP server implements OAuth 2.1 with PKCE and dynamic client registration, so any MCP client that supports remote OAuth servers (Claude, ChatGPT, Cursor, and others) can connect with just the server URL. Access is scoped to your Zonka Feedback user: the AI tool sees exactly what you can see in the app, nothing more.
+Sign in through your browser and approve the connection — no keys to copy. The Zonka Feedback MCP server implements OAuth 2.1 with PKCE, so any MCP client that supports remote OAuth servers (Claude, ChatGPT, Cursor, and others) can connect with just the server URL. Access is scoped to your Zonka Feedback user: the AI tool sees exactly what you can see in the app, nothing more.
 
 
 
@@ -81,14 +79,6 @@ It should call `who_am_i` and reply with your name, account, and available tools
 * **Read-only.** The MCP surface honours read scope only — write scopes on an API key are ignored.
 
 ### Troubleshooting
-
-Test the connection directly with the MCP Inspector:
-
-```
-npx @modelcontextprotocol/inspector
-```
-
-Choose Streamable HTTP and connect to `https://mcp.zonkafeedback.com`
 
 Common issues:
 
@@ -337,10 +327,9 @@ Key Parameters:
 
 **Is the MCP server read-only?** Yes. All 21 tools read data; none of them modify your account. Write capabilities will be introduced later with explicit, per-workspace controls.
 
-**Which regions are supported?** All of them — US, EU, India, and Australia — through the single URL `https://mcp.zonkafeedback.com`. Routing to your data region is automatic.
+**Which regions are supported?** All of them — US, EU, IN, and AU — through the single URL `https://mcp.zonkafeedback.com`. Routing to your data region is automatic.
 
 **Who in my team can connect?** Once an admin has enabled the MCP server for your account (Settings → AI Governance → AI Features → Agents & MCP), any Zonka Feedback user can authorize a connection with their own login. Each connection carries that user's permissions only.
 
 **Does the AI tool store my feedback data?** The MCP server returns data to your AI tool at query time. How the AI tool retains conversation data is governed by that tool's own data policy — review it before connecting, as you would for any integration.
 
-**Can I use the MCP server and the Zonka Feedback API together?** Yes. MCP is designed for AI assistants; the REST API remains the right choice for building integrations and syncing data.
