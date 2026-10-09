@@ -1,7 +1,5 @@
 # Zonka Feedback MCP Server
 
-## Zonka Feedback MCP Server
-
 **How Zonka Feedback MCP works?**
 
 The Model Context Protocol (MCP) is an open standard that lets AI tools and applications connect to Zonka Feedback's data and services in a secure, standardized way. With the Zonka Feedback MCP server, AI assistants and agents — Claude, ChatGPT, Gemini, Cursor, Claude Code, Codex, and any other MCP-capable client — can:
